@@ -9,7 +9,7 @@ module.exports = () => {
   const srcDir = "./src/";
   const destDir = "dist";
 
-  const buildFilePath = (modulePath) => {
+  const buildFilePath = (modulePath: string) => {
     // skidam "/" sa početka i kraja stringa
     if (modulePath[0] !== "/") modulePath = `/${modulePath}`;
     if (modulePath.length > 1 && modulePath[modulePath.length - 1] !== "/") modulePath = `${modulePath}/`;
@@ -55,8 +55,9 @@ module.exports = () => {
               loader: "file-loader",
               options: {
                 name: "[path][name].[ext]",
-                outputPath: (url, resourcePath) => resourcePath.replace(path.resolve(__dirname, "src"), ""),
-                publicPath: (url, resourcePath) => `/img/${url.replace(/src\/img\//, "")}`,
+                outputPath: (url: string, resourcePath: string) =>
+                  resourcePath.replace(path.resolve(__dirname, "src"), ""),
+                publicPath: (url: string, resourcePath: string) => `/img/${url.replace(/src\/img\//, "")}`,
               },
             },
           ],
