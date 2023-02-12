@@ -18,6 +18,7 @@ custom loader that checks all webpack entry points and logs out images used in t
 eg.
 
 ```bash
+# terminal output
 ⬡ custom-loader: entry ./Country, images: img/logo.png
 ⬡ custom-loader: entry ./Category, images: img/avatar.png
 ⬡ custom-loader: entry ./App, images: img/avatar.png, img/logo.png
@@ -29,6 +30,7 @@ Does the same thing except it returns them formatted for bash script
 eg.
 
 ```bash
+# terminal output
 ⬡ custom-loader: entry,Category,./img/avatar.png
 ⬡ custom-loader: entry,App,./img/avatar.png
 ⬡ custom-loader: entry,App,./img/logo.png
