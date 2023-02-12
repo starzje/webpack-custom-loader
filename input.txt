@@ -1,0 +1,4 @@
+entry,Category,./img/avatar.png
+entry,App,./img/avatar.png
+entry,App,./img/logo.png
+entry,Country,./img/logo.png
