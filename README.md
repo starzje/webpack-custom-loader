@@ -11,6 +11,30 @@ make the bash script runnable
 chmod +x script.sh
 ```
 
+
+## img-loader-preview.js
+
+custom loader that checks all webpack entry points and logs out images used in that entry point.
+eg.
+
+```bash
+⬡ custom-loader: entry ./Country, images: img/logo.png
+⬡ custom-loader: entry ./Category, images: img/avatar.png
+⬡ custom-loader: entry ./App, images: img/avatar.png, img/logo.png
+```
+
+## img-loader-bash.js
+
+Does the same thing except it returns them formatted for bash script
+eg.
+
+```bash
+⬡ custom-loader: entry,Category,./img/avatar.png
+⬡ custom-loader: entry,App,./img/avatar.png
+⬡ custom-loader: entry,App,./img/logo.png
+⬡ custom-loader: entry,Country,./img/logo.png
+```
+
 ### webpack config example for multiple application entries
 
 ```javascript
@@ -49,32 +73,9 @@ rules: [
 ];
 ```
 
-## img-loader-preview.js
-
-custom loader that checks all webpack entry points and logs out images used in that entry point.
-eg.
-
-```bash
-⬡ custom-loader: entry ./Country, images: img/logo.png
-⬡ custom-loader: entry ./Category, images: img/avatar.png
-⬡ custom-loader: entry ./App, images: img/avatar.png, img/logo.png
-```
-
-## img-loader-bash.js
-
-Does the same thing except it returns them formatted for bash script
-eg.
-
-```bash
-⬡ custom-loader: entry,Category,./img/avatar.png
-⬡ custom-loader: entry,App,./img/avatar.png
-⬡ custom-loader: entry,App,./img/logo.png
-⬡ custom-loader: entry,Country,./img/logo.png
-```
-
 ## script.sh
 
-Bash script that creates folder structure for images based on the category data. If image is used in multiple categories, creates a new folder called "shared".
+Bash script that creates folder structure for images based on the category data. If image is used in multiple categories, creates a new folder called "shared". Reads data from input.txt
 
 ```bash
 declare -A category_images
