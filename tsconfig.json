@@ -3,8 +3,9 @@
     "outDir": "./dist/",
     "noImplicitAny": true,
     "sourceMap": true,
-    "module": "es6",
-    "target": "es5",
+    "module": "CommonJS",
+    "target": "ES5",
+    "downlevelIteration": true,
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node"

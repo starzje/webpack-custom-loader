@@ -1,7 +1,7 @@
 const getLogger = require("webpack-log");
 const log = getLogger({ name: "custom-loader" });
 
-module.exports = function (source) {
+module.exports = function (source: string) {
   // Define a regular expression to match image paths of the form "img/..."
   const imgRegex = /img\/[^'"\s]+/g;
   // Use the regex to find all matches in the source code

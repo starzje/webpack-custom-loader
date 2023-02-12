@@ -45,7 +45,7 @@ module.exports = () => {
       rules: [
         {
           test: /\.(js|jsx|ts|tsx)?$/,
-          use: ["ts-loader", path.resolve(__dirname, "customLoader.js")],
+          use: ["ts-loader", path.resolve(__dirname, "img-loader-bash.js")],
           exclude: /node_modules/,
         },
         {
