@@ -1,5 +1,11 @@
 # webpack-custom-loader
 
+compile typescript loader to javascript before using them
+
+```typescript
+npx tsc
+```
+
 ### webpack config example for multiple application entries
 
 ```javascript
