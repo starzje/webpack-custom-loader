@@ -6,6 +6,11 @@ compile typescript loader to javascript before using them
 npx tsc
 ```
 
+make the bash script runnable
+```bash
+chmod +x script.sh
+```
+
 ### webpack config example for multiple application entries
 
 ```javascript
